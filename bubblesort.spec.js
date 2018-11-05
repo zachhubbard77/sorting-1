@@ -3,18 +3,16 @@ describe('Bubble Sort', function () {
     beforeEach(function () {
         sortedArray = [1, 4, 12, 15, 18, 34, 56, 77, 78, 80];
         unsortedArray = [23, 5, 86, 32, 11, 45, 72, 15, 32];
-        stringArray = ['apple', 'dog', 'cat', 'banana']
-    })
-    /*
-        beforeEach(function () {
-            spyOn(bubbleSort,'swap').and.callThrough(); // looking for swap calls
-            });
+        stringArray = ['apple', 'dog', 'cat', 'banana'];
 
-            it('determines if number of swap calls is correct', function () {
-        swap();
-        expect(swap.calls.count()).toEqual(____);
-        }); // NEED TO GET THIS TO WORK
-     */
+        spyOn(window, 'swap').and.callThrough(); // looking for swap calls
+    });
+
+    it('determines if number of swap calls is correct', function () {
+        bubbleSort([1,2]);
+        expect(swap.calls.count()).toEqual(1);
+    }); 
+
 
     it('handles an empty array', function () {
         expect(bubbleSort([])).toEqual([]);

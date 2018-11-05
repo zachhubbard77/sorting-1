@@ -6,7 +6,7 @@ function swap(index1, index2) {
     }
     return [index1, index2];
 }
-
+//   //
 function bubbleSort(array) {
     let rounds = array.length - 1;
     while (rounds > 0) {
